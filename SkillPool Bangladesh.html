@@ -1,0 +1,625 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>SkillPool Bangladesh</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout concept: one long editorial page. Hero pairs the promise with a sample skill portfolio card; five pillar sections alternate light and deep-green bands; a working booking preview sits inside the services pillar. */
+:root {
+  --bg: #F4F7FA;
+  --surface: #FFFFFF;
+  --tint: #E2EDF6;
+  --ink: #14264A;
+  --muted: #4F5F7B;
+  --line: #D6E0EA;
+  --green: #1B3F7A;
+  --teal: #0B7F74;
+  --on-green: #FFFFFF;
+  --sun: #EA1D25;
+  --band-bg: #14305E;
+  --band-fg: #EEF4FB;
+  --band-muted: #AEC1DB;
+  --band-line: #2C4C80;
+  --shadow: 0 18px 40px -22px rgba(20, 48, 94, .45);
+  --display: "Familjen Grotesk", "Hind Siliguri", system-ui, sans-serif;
+  --text: "Inter", "Hind Siliguri", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0A1220; --surface: #111C30; --tint: #16294A; --ink: #E8EEF8; --muted: #9DB0CC; --line: #23365A;
+    --green: #7FAEF5; --teal: #3CCDB8; --on-green: #06142C; --sun: #FF4A52;
+    --band-bg: #0F2347; --band-fg: #EEF4FB; --band-muted: #A9BDD9; --band-line: #2A4577;
+    --shadow: 0 18px 40px -22px rgba(0, 0, 0, .8);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0A1220; --surface: #111C30; --tint: #16294A; --ink: #E8EEF8; --muted: #9DB0CC; --line: #23365A;
+  --green: #7FAEF5; --teal: #3CCDB8; --on-green: #06142C; --sun: #FF4A52;
+  --band-bg: #0F2347; --band-fg: #EEF4FB; --band-muted: #A9BDD9; --band-line: #2A4577;
+  --shadow: 0 18px 40px -22px rgba(0, 0, 0, .8);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.65 var(--text); -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 30; }
+a { color: inherit; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; letter-spacing: -.015em; }
+h1 { font-size: clamp(2.7rem, 6.4vw, 5rem); line-height: 1.02; font-weight: 700; letter-spacing: -.03em; }
+h2 { font-size: clamp(1.9rem, 3.8vw, 3rem); line-height: 1.08; font-weight: 600; }
+h3 { font-size: 1.15rem; line-height: 1.3; font-weight: 600; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 4px; }
+.bn { font-family: "Hind Siliguri", var(--text); }
+
+.wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.eyebrow { font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--green); }
+.band .eyebrow { color: var(--band-muted); }
+.lead { font-size: 1.125rem; color: var(--muted); max-width: 60ch; }
+.band .lead { color: var(--band-muted); }
+section[id] { scroll-margin-top: 76px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: 0 1.4rem; border-radius: 999px; font: 600 .95rem var(--text); text-decoration: none; border: 1.5px solid transparent; cursor: pointer; transition: transform .15s ease, background .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--green); color: var(--on-green); }
+.btn-ghost { border-color: var(--line); background: transparent; color: var(--ink); }
+.btn-ghost:hover { border-color: var(--green); }
+.band .btn-ghost { color: var(--band-fg); border-color: var(--band-line); }
+
+/* Header */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: var(--bg); border-bottom: 1px solid var(--line); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 68px; }
+.brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; font: 700 1.2rem var(--display); letter-spacing: -.02em; }
+.brand small { display: block; font: 500 .66rem var(--text); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.brand .logo { flex: none; width: 46px; height: 46px; border-radius: 50%; display: block; }
+.brand .word b { color: var(--teal); font-weight: 700; }
+.brand .word { line-height: 1.15; }
+.nav { display: flex; align-items: center; gap: 1.6rem; }
+.nav a { text-decoration: none; font-size: .92rem; font-weight: 500; color: var(--muted); padding: .4rem 0; }
+.nav a:hover { color: var(--ink); }
+.nav .btn { color: var(--on-green); min-height: 42px; padding: 0 1.1rem; }
+.menu-btn { display: none; min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); font: 600 .9rem var(--text); cursor: pointer; }
+@media (max-width: 960px) {
+  .menu-btn { display: inline-flex; align-items: center; }
+  .nav { position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: .5rem max(16px, env(safe-area-inset-right, 0px)) 1.2rem max(16px, env(safe-area-inset-left, 0px)); }
+  .nav[hidden] { display: none; }
+  .nav a { padding: .85rem 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
+  .nav .btn { margin-top: 1rem; border-bottom: 0; }
+}
+
+/* Hero */
+.hero { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3rem, 6vw, 5.5rem); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { margin-block: 1rem 1.4rem; }
+.hero h1 span { color: var(--green); }
+.hero .lead { margin-bottom: 2rem; }
+.cta-row { display: flex; flex-wrap: wrap; gap: .8rem; }
+.creed { margin-top: 2.6rem; padding-top: 1.2rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; font: 600 .95rem var(--display); color: var(--muted); }
+.hero-visual { position: relative; background: var(--tint); border-radius: 28px; padding: clamp(1.2rem, 3vw, 2rem); overflow: hidden; min-width: 0; }
+.sun { position: absolute; width: 62%; aspect-ratio: 1; border-radius: 50%; background: var(--sun); right: -14%; top: -16%; max-width: 100%; }
+.pcard { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 1.4rem; box-shadow: var(--shadow); margin-top: 3.2rem; }
+.pcard-top { display: flex; align-items: center; gap: 1rem; }
+.avatar { flex: none; width: 56px; height: 56px; border-radius: 50%; background: var(--tint); display: grid; place-items: center; color: var(--green); }
+.pcard h3 { font-size: 1.1rem; }
+.pcard .role { color: var(--muted); font-size: .9rem; }
+.badge { margin-left: auto; font-size: .72rem; font-weight: 600; padding: .25rem .6rem; border-radius: 999px; background: var(--tint); color: var(--green); white-space: nowrap; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-block: 1.1rem; }
+.chip { font-size: .8rem; padding: .25rem .7rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+.pmeta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.pmeta dt { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.pmeta dd { font: 600 1rem var(--display); }
+.sample-tag { position: absolute; left: clamp(1.2rem, 3vw, 2rem); top: clamp(1.2rem, 3vw, 2rem); font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); background: var(--surface); padding: .3rem .7rem; border-radius: 999px; }
+@media (max-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } }
+
+/* KSA strip */
+.ksa { border-block: 1px solid var(--line); background: var(--surface); }
+.ksa .wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ksa-item { padding: 2rem 1.6rem 2rem 0; }
+.ksa-item + .ksa-item { padding-left: 1.6rem; border-left: 1px solid var(--line); }
+.ksa-item b { display: block; font: 700 clamp(3rem, 6vw, 4.5rem)/1 var(--display); color: var(--teal); letter-spacing: -.04em; }
+.ksa-item h3 { margin-top: .6rem; }
+.ksa-item p { color: var(--muted); font-size: .95rem; margin-top: .4rem; }
+.ksa-belief { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-block: 1.1rem; font: 600 1.05rem var(--display); color: var(--muted); }
+@media (max-width: 760px) {
+  .ksa .wrap { grid-template-columns: minmax(0, 1fr); }
+  .ksa-item, .ksa-item + .ksa-item { padding: 1.4rem 0; border-left: 0; }
+  .ksa-item + .ksa-item { border-top: 1px solid var(--line); }
+}
+
+/* Pillar sections */
+.pillar { padding-block: clamp(3.5rem, 8vw, 7rem); }
+.band { background: var(--band-bg); color: var(--band-fg); }
+.pillar-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem clamp(2rem, 6vw, 5rem); align-items: end; margin-bottom: clamp(2rem, 4vw, 3.2rem); }
+.pnum { font: 700 .95rem var(--display); color: var(--green); display: flex; align-items: center; gap: .8rem; margin-bottom: 1rem; }
+.pnum::after { content: ""; flex: 0 0 56px; height: 2px; background: currentColor; opacity: .5; }
+.band .pnum { color: var(--band-muted); }
+.pillar-head .bn-line { font-size: 1.05rem; color: var(--muted); border-left: 3px solid var(--sun); padding-left: 1rem; }
+.band .pillar-head .bn-line { color: var(--band-muted); }
+.pillar-sub { font: 500 1.15rem var(--display); color: var(--muted); margin-top: .9rem; }
+.band .pillar-sub { color: var(--band-muted); }
+@media (max-width: 860px) { .pillar-head { grid-template-columns: minmax(0, 1fr); align-items: start; } }
+
+.rows { border-top: 1px solid var(--line); }
+.band .rows { border-color: var(--band-line); }
+.row { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: .4rem 2rem; padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+.band .row { border-color: var(--band-line); }
+.row p { color: var(--muted); }
+.band .row p { color: var(--band-muted); }
+@media (max-width: 700px) { .row { grid-template-columns: minmax(0, 1fr); } }
+.goal { margin-top: 2rem; font: 600 1.25rem var(--display); max-width: 40ch; }
+.goal span { color: var(--green); }
+
+.cols-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.cols-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.cols-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+@media (max-width: 1020px) { .cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .cols-4, .cols-3, .cols-2 { grid-template-columns: minmax(0, 1fr); } }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 1.4rem; min-width: 0; }
+.box h3 { margin-bottom: .8rem; }
+.box .tag { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: .5rem; }
+.box li { padding-block: .4rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+.box li:first-child { border-top: 0; padding-top: 0; }
+
+/* Booking preview */
+.booking { margin-top: clamp(2.5rem, 5vw, 4rem); display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 1.5rem; background: var(--tint); border-radius: 24px; padding: clamp(1.2rem, 3vw, 2.2rem); }
+.booking h3 { font-size: 1.5rem; margin-bottom: .4rem; }
+.booking > div > p { color: var(--muted); margin-bottom: 1.2rem; }
+form.book { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+form.book .full { grid-column: 1 / -1; }
+label { display: block; font-size: .8rem; font-weight: 600; margin-bottom: .3rem; }
+select, input[type="number"] { width: 100%; min-height: 46px; padding: 0 .8rem; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: 400 .95rem var(--text); }
+select:focus, input:focus { border-color: var(--green); outline: none; box-shadow: 0 0 0 3px var(--tint); }
+form.book .btn { width: 100%; }
+.summary { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 1.4rem; align-self: start; min-width: 0; }
+.summary .tag { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
+.summary h4 { font: 600 1.25rem/1.3 var(--display); margin: .5rem 0 1rem; }
+.summary dl { display: grid; grid-template-columns: auto 1fr; gap: .45rem 1rem; font-size: .92rem; }
+.summary dt { color: var(--muted); }
+.summary dd { font-weight: 500; }
+.summary .note { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+.steps { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .8rem; counter-reset: s; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.steps li { counter-increment: s; font-size: .9rem; color: var(--muted); }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 28px; height: 28px; margin-bottom: .5rem; border-radius: 50%; background: var(--green); color: var(--on-green); font: 700 .85rem var(--display); }
+@media (max-width: 900px) { .booking { grid-template-columns: minmax(0, 1fr); } .steps { grid-template-columns: minmax(0, 1fr); } .steps li { display: flex; align-items: center; gap: .7rem; } .steps li::before { margin: 0; flex: none; } }
+@media (max-width: 480px) { form.book { grid-template-columns: minmax(0, 1fr); } }
+
+/* Global pipeline */
+.pipe { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+.pipe li { position: relative; border: 1px solid var(--band-line); border-radius: 14px; padding: 1.1rem; font: 600 1rem/1.35 var(--display); }
+.pipe li small { display: block; margin-top: .4rem; font: 400 .85rem/1.5 var(--text); color: var(--band-muted); }
+.pipe li:not(:last-child)::after { content: "\2192"; position: absolute; right: -.95rem; top: 50%; transform: translateY(-50%); color: var(--sun); font-size: 1.1rem; background: var(--band-bg); width: 1rem; text-align: center; z-index: 1; }
+@media (max-width: 900px) { .pipe { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pipe li::after { display: none; } }
+@media (max-width: 520px) { .pipe { grid-template-columns: minmax(0, 1fr); } }
+.band .box { background: transparent; border-color: var(--band-line); }
+.band .box li { border-color: var(--band-line); color: var(--band-muted); }
+
+/* Technology */
+.split { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: clamp(1.5rem, 5vw, 4rem); }
+@media (max-width: 900px) { .split { grid-template-columns: minmax(0, 1fr); } }
+.serve { margin-top: 1.6rem; }
+.serve p { font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .7rem; }
+.serve .chips { margin-block: 0; }
+.serve .chip { color: var(--ink); background: var(--surface); }
+
+/* Energy */
+.energy-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.energy-grid > div { padding: 1.6rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); min-width: 0; }
+.energy-grid h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+.energy-grid p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 960px) { .energy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .energy-grid { grid-template-columns: minmax(0, 1fr); } }
+.vision-line { margin-top: 2rem; display: flex; align-items: center; gap: 1rem; font: 600 1.2rem var(--display); }
+.vision-line::before { content: ""; flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--sun); }
+
+/* About */
+.about { background: var(--surface); border-block: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 6vw, 5rem); }
+@media (max-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1fr); } }
+.about p.big { font: 500 1.35rem/1.45 var(--display); margin-top: 1rem; }
+.mission li { padding-block: .8rem; border-top: 1px solid var(--line); }
+.mission li:last-child { border-bottom: 1px solid var(--line); }
+.who { margin-top: 3rem; max-width: 72ch; color: var(--muted); display: grid; gap: 1rem; }
+.who p:first-child { color: var(--ink); font-size: 1.1rem; }
+.tablewrap { overflow-x: auto; margin-top: 3rem; border: 1px solid var(--line); border-radius: 16px; }
+table { width: 100%; border-collapse: collapse; min-width: 520px; }
+th, td { text-align: left; padding: .9rem 1.2rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
+td:first-child { font: 600 1rem var(--display); white-space: nowrap; }
+td:last-child { color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
+.contact-grid .box { background: transparent; border-color: var(--band-line); overflow-wrap: anywhere; }
+.contact-grid h3 { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--band-muted); font-weight: 600; font-family: var(--text); }
+.contact-grid p { color: var(--band-fg); font-size: 1rem; line-height: 1.6; }
+.contact-grid a { text-decoration-color: var(--sun); text-underline-offset: 4px; }
+.contact-grid dl { display: grid; grid-template-columns: auto 1fr; gap: .4rem .9rem; }
+.contact-grid dt { color: var(--band-muted); }
+.contact-grid dd { margin: 0; user-select: all; }
+
+/* Closing + footer */
+.closing { padding-block: clamp(4rem, 9vw, 7rem); text-align: left; }
+.closing h2 { font-size: clamp(2rem, 4.6vw, 3.8rem); max-width: 22ch; }
+.closing p { margin-top: 1.2rem; color: var(--band-muted); max-width: 56ch; }
+.closing .cta-row { margin-top: 2rem; }
+.closing .btn-primary { background: var(--band-fg); color: var(--band-bg); }
+footer { background: var(--band-bg); color: var(--band-fg); border-top: 1px solid var(--band-line); padding-block: 2rem 2.4rem; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.2rem 2rem; font-size: .9rem; color: var(--band-muted); }
+footer nav { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--band-fg); }
+</style>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="SkillPool Bangladesh home">
+      <img class="logo" src="data:image/jpeg;base64,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" width="46" height="46" alt="">
+      <span class="word">Skill<b>POOL</b><small>Bangladesh</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav class="nav" id="siteNav" aria-label="Main">
+      <a href="#skills">Skills &amp; HR</a>
+      <a href="#services">Service Marketplace</a>
+      <a href="#global">Global Workforce</a>
+      <a href="#technology">Technology &amp; Products</a>
+      <a href="#energy">Green Energy</a>
+      <a class="btn btn-primary" href="#book">Book a service</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">National skill-to-opportunity platform</p>
+        <h1>Connecting <span>Skills</span> to Jobs.</h1>
+        <p class="lead">We train people, place them in work, and let customers book them for on-demand services. Technology and renewable-energy solutions sit on the same trusted platform, at home and abroad.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#book">Book skilled manpower</a>
+          <a class="btn btn-ghost" href="#skills">Build your skills</a>
+        </div>
+        <p class="creed" aria-label="Our promise"><span>Empowering People.</span><span>Transforming Skills.</span><span>Creating Opportunities.</span></p>
+      </div>
+      <div class="hero-visual">
+        <div class="sun" aria-hidden="true"></div>
+        <span class="sample-tag">Sample portfolio</span>
+        <article class="pcard" aria-label="Sample skill portfolio">
+          <div class="pcard-top">
+            <div class="avatar" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4-6.5 8-6.5s7 2 8 6.5"/></svg>
+            </div>
+            <div>
+              <h3>Skilled technician</h3>
+              <p class="role">Electrical &amp; electronic maintenance</p>
+            </div>
+            <span class="badge">Verified</span>
+          </div>
+          <div class="chips">
+            <span class="chip">Installation</span><span class="chip">Maintenance</span><span class="chip">Workplace safety</span><span class="chip">Bangla, English</span>
+          </div>
+          <dl class="pmeta">
+            <div><dt>Experience</dt><dd>6 years</dd></div>
+            <div><dt>Certificates</dt><dd>3</dd></div>
+            <div><dt>Status</dt><dd>Available</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ksa" aria-labelledby="ksa-title">
+    <div class="wrap">
+      <h2 id="ksa-title" style="position:absolute;left:-9999px">The KSA framework</h2>
+      <div class="ksa-item"><b>K</b><h3>Knowledge</h3><p>Theoretical understanding, technical knowledge, industry awareness and informed decision-making.</p></div>
+      <div class="ksa-item"><b>S</b><h3>Skills</h3><p>Practical, technical, digital, communication and problem-solving competencies, built through hands-on learning.</p></div>
+      <div class="ksa-item"><b>A</b><h3>Attitude</h3><p>Professionalism, integrity, discipline, teamwork, adaptability, responsibility and a positive workplace mindset.</p></div>
+      <p class="ksa-belief">Knowledge builds understanding. Skills create capability. Attitude drives performance.</p>
+    </div>
+  </section>
+
+  <!-- 01 -->
+  <section class="pillar" id="skills">
+    <div class="wrap">
+      <div class="pillar-head">
+        <div>
+          <p class="pnum">01</p>
+          <h2>Skills &amp; Human Resource Solutions</h2>
+          <p class="pillar-sub">Developing Skills. Connecting People. Creating Opportunities.</p>
+        </div>
+        <p class="bn bn-line" lang="bn">দক্ষ মানবসম্পদ তৈরি, চাকরির সংস্থান এবং দক্ষ কর্মী ও নিয়োগদাতার মধ্যে সংযোগ স্থাপন।</p>
+      </div>
+      <p class="lead" style="margin-bottom:2rem">We develop a competent workforce and connect skilled individuals with suitable employment and income-generating opportunities, through skills development, job placement, workforce management and industry-oriented training.</p>
+      <div class="rows">
+        <div class="row"><h3>Job Placement &amp; Career Support</h3><p>Connecting job seekers with employment in government, the private sector, industries and other organizations.</p></div>
+        <div class="row"><h3>Skills Development &amp; Training</h3><p>Government-funded, privately funded and self-funded training programmes.</p></div>
+        <div class="row"><h3>Industry-Oriented Training</h3><p>Demand-driven training designed and arranged around what industry requires.</p></div>
+        <div class="row"><h3>Workforce Readiness</h3><p>Job-ready candidates, prepared through practical, technical and professional skills development.</p></div>
+        <div class="row"><h3>Human Resource Solutions</h3><p>Workforce sourcing, recruitment coordination and skilled manpower management for organizations.</p></div>
+        <div class="row"><h3>Personal Skills Portfolio</h3><p>An individual digital profile showing qualifications, competencies, experience, certifications and work history.</p></div>
+      </div>
+      <p class="goal">Our goal: bridge the gap between <span>available skills</span> and actual labour market demand.</p>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section class="pillar" id="services" style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="pillar-head">
+        <div>
+          <p class="pnum">02</p>
+          <h2>SkillPool Services &amp; Workforce Marketplace</h2>
+          <p class="pillar-sub">Your Skills. Your Services. One Connected Platform.</p>
+        </div>
+        <p class="bn bn-line" lang="bn">ব্যক্তি ও প্রতিষ্ঠানকে দক্ষ কর্মী, পেশাজীবী এবং প্রয়োজনীয় সার্ভিসের সঙ্গে যুক্ত করা।</p>
+      </div>
+      <p class="lead" style="margin-bottom:2rem">A digital marketplace where individuals, households, businesses and organizations discover, select and book skilled professionals and service providers. Explore categories, view professional profiles, review skills and experience, and submit a booking request.</p>
+      <div class="cols-4">
+        <div class="box" style="background:var(--bg)"><span class="tag">A</span><h3>Technical &amp; Maintenance</h3><ul><li>Electrical and electronic maintenance</li><li>Welding and fabrication</li><li>Plumbing and pipefitting</li><li>Automotive mechanics and vehicle repair</li><li>Building maintenance and repair</li><li>Construction support and excavation</li></ul></div>
+        <div class="box" style="background:var(--bg)"><span class="tag">B</span><h3>Agriculture &amp; Green</h3><ul><li>Farming and agricultural support</li><li>Gardening and landscaping</li><li>Flower cultivation and flower cutting</li><li>Plant care and garden maintenance</li><li>Agricultural labour and field support</li></ul></div>
+        <div class="box" style="background:var(--bg)"><span class="tag">C</span><h3>Household &amp; General</h3><ul><li>Cleaning and housekeeping</li><li>Office and commercial cleaning</li><li>General maintenance assistance</li><li>Facility support services</li><li>Other skilled and semi-skilled services</li></ul></div>
+        <div class="box" style="background:var(--bg)"><span class="tag">D</span><h3>Professional &amp; Consultancy</h3><ul><li>Business consultancy</li><li>Technical consultancy</li><li>IT and digital services</li><li>Professional support services</li><li>Specialized project-based services</li></ul></div>
+      </div>
+
+      <div class="booking" id="book">
+        <div>
+          <h3>Book skilled manpower</h3>
+          <p>Choose what you need and see how a request will look. This is a preview; booking opens when the platform launches.</p>
+          <form class="book" id="bookForm">
+            <div class="full">
+              <label for="svc">Service</label>
+              <select id="svc">
+                <optgroup label="Technical &amp; Maintenance">
+                  <option>Electrical and electronic maintenance</option><option>Welding and fabrication</option><option>Plumbing and pipefitting</option><option>Automotive mechanics and vehicle repair</option><option>Building maintenance and repair</option><option>Construction support and excavation</option>
+                </optgroup>
+                <optgroup label="Agriculture &amp; Green">
+                  <option>Farming and agricultural support</option><option>Gardening and landscaping</option><option>Flower cultivation and flower cutting</option><option>Agricultural labour and field support</option>
+                </optgroup>
+                <optgroup label="Household &amp; General">
+                  <option>Cleaning and housekeeping</option><option>Office and commercial cleaning</option><option>Facility support services</option>
+                </optgroup>
+                <optgroup label="Professional &amp; Consultancy">
+                  <option>Business consultancy</option><option>Technical consultancy</option><option>IT and digital services</option>
+                </optgroup>
+              </select>
+            </div>
+            <div>
+              <label for="loc">Location</label>
+              <select id="loc"><option>Dhaka</option><option>Chattogram</option><option>Rajshahi</option><option>Khulna</option><option>Sylhet</option><option>Rangpur</option><option>Barishal</option><option>Mymensingh</option></select>
+            </div>
+            <div>
+              <label for="num">Number of workers</label>
+              <input id="num" type="number" min="1" max="500" value="3">
+            </div>
+            <div>
+              <label for="dur">Duration</label>
+              <select id="dur"><option>Daily</option><option selected>Weekly</option><option>Monthly</option><option>Project-based</option></select>
+            </div>
+            <div>
+              <label for="dt">Start date</label>
+              <input id="dt" type="date" style="width:100%;min-height:46px;padding:0 .8rem;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:400 .95rem var(--text)">
+            </div>
+            <div class="full"><button class="btn btn-primary" type="submit">Preview my request</button></div>
+          </form>
+        </div>
+        <div class="summary" aria-live="polite">
+          <span class="tag">Request preview</span>
+          <h4 id="sumTitle">3 × Electrical and electronic maintenance</h4>
+          <dl>
+            <dt>Location</dt><dd id="sumLoc">Dhaka</dd>
+            <dt>Duration</dt><dd id="sumDur">Weekly</dd>
+            <dt>Start</dt><dd id="sumDt">Pick a date</dd>
+            <dt>You receive</dt><dd>Confirmation and worker profiles</dd>
+          </dl>
+          <p class="note">Nothing is sent from this preview. Real requests will go to SkillPool once online booking is live.</p>
+        </div>
+        <ol class="steps" aria-label="How booking works">
+          <li>Choose a service</li><li>Select location, date and workers</li><li>Receive confirmation and worker profiles</li><li>Work is completed</li><li>Pay and rate the service</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="pillar band" id="global">
+    <div class="wrap">
+      <div class="pillar-head">
+        <div>
+          <p class="pnum">03</p>
+          <h2>Global Skills &amp; Overseas Workforce Development</h2>
+          <p class="pillar-sub">Preparing Local Talent for Global Opportunities.</p>
+        </div>
+        <p class="bn bn-line" lang="bn">আন্তর্জাতিক শ্রমবাজারের চাহিদা অনুযায়ী দক্ষ জনশক্তি তৈরি এবং বিদেশে কর্মসংস্থানের সুযোগ তৈরিতে সহায়তা।</p>
+      </div>
+      <p class="lead" style="margin-bottom:2.2rem">We aim to prepare a skilled, competent and internationally competitive workforce for domestic and overseas employment, working with government agencies, private training institutions, international development partners and industry stakeholders.</p>
+      <ol class="pipe" aria-label="Pipeline from training to employment">
+        <li>International skills training<small>Aligned with international occupational standards</small></li>
+        <li>Language, IT and KSA<small>Destination-ready communication, digital and workplace skills</small></li>
+        <li>Skills recognition<small>Competency assessment and certification</small></li>
+        <li>Overseas employment<small>Through appropriate authorized channels</small></li>
+      </ol>
+      <div class="cols-3">
+        <div class="box"><h3>International Skills Training</h3><ul><li>Programmes aligned with international occupational standards and labour market requirements</li></ul></div>
+        <div class="box"><h3>Language Development</h3><ul><li>Language training based on destination-country and employer requirements</li></ul></div>
+        <div class="box"><h3>IT &amp; Digital Competencies</h3><ul><li>Digital literacy, ICT, software and technology-related skills</li></ul></div>
+        <div class="box"><h3>KSA: Knowledge, Skills &amp; Attitude</h3><ul><li>Professional knowledge, practical skills, workplace behaviour and professional attitudes</li></ul></div>
+        <div class="box"><h3>Industry-Specific Training</h3><ul><li>Construction, manufacturing, hospitality, healthcare support, technical services and other sectors, subject to applicable requirements</li></ul></div>
+        <div class="box"><h3>Overseas Employment Facilitation</h3><ul><li>Employer connections, workforce preparation and recruitment coordination through authorized channels</li></ul></div>
+      </div>
+      <p class="goal" style="margin-top:2.4rem">Recognition of Skills: competency assessment, certification and recognition of prior learning, to build a <span style="color:var(--band-fg);text-decoration:underline;text-decoration-color:var(--sun);text-underline-offset:6px">sustainable pipeline</span> of employment-ready people.</p>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="pillar" id="technology">
+    <div class="wrap">
+      <div class="pillar-head">
+        <div>
+          <p class="pnum">04</p>
+          <h2>Technology, Products &amp; Integrated Solutions</h2>
+          <p class="pillar-sub">Delivering Technology. Enabling Businesses. Solving Problems.</p>
+        </div>
+        <p class="bn bn-line" lang="bn">সরকার, শিল্পপ্রতিষ্ঠান, অফিস ও উদ্যোক্তাদের জন্য প্রযুক্তি, পণ্য এবং সমন্বিত সমাধান সরবরাহ।</p>
+      </div>
+      <div class="split">
+        <div>
+          <p class="lead">Technology-based products, equipment and integrated solutions, combined with technical expertise and service delivery, to solve practical operational challenges and raise productivity.</p>
+          <div class="serve">
+            <p>Who we serve</p>
+            <div class="chips"><span class="chip">Government organizations</span><span class="chip">Industries</span><span class="chip">Businesses</span><span class="chip">Offices</span><span class="chip">Entrepreneurs</span></div>
+          </div>
+        </div>
+        <div class="cols-2">
+          <div class="box"><span class="tag">A</span><h3>Information Technology &amp; Digital</h3><ul><li>Website and web application development</li><li>Software and customized digital solutions</li><li>Digital transformation support</li><li>IT infrastructure and technical support</li><li>Business automation solutions</li></ul></div>
+          <div class="box"><span class="tag">B</span><h3>Electronics &amp; Electrical</h3><ul><li>Electronic equipment and devices</li><li>Electrical systems and accessories</li><li>Office and industrial electronic solutions</li><li>Installation, maintenance and technical support</li></ul></div>
+          <div class="box"><span class="tag">C</span><h3>Automotive &amp; Mechanical</h3><ul><li>Vehicle-related products and equipment</li><li>Automotive diagnostic and maintenance solutions</li><li>Mechanical tools and industrial equipment</li><li>Technical maintenance and repair support</li></ul></div>
+          <div class="box"><span class="tag">D</span><h3>Institutional &amp; Industrial Supply</h3><ul><li>Office equipment and accessories</li><li>Industrial tools and machinery</li><li>IT and electronic products</li><li>Customized product sourcing and supply</li><li>Integrated procurement and technical support</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="pillar" id="energy" style="background:var(--tint)">
+    <div class="wrap">
+      <div class="pillar-head">
+        <div>
+          <p class="pnum">05</p>
+          <h2>Renewable Energy &amp; Sustainable Solutions</h2>
+          <p class="pillar-sub">Powering a Greener Future. Creating Sustainable Value.</p>
+        </div>
+        <p class="bn bn-line" lang="bn">নবায়নযোগ্য জ্বালানি, বায়োগ্যাস এবং পরিবেশবান্ধব প্রযুক্তির মাধ্যমে টেকসই জীবনযাত্রার সমাধান।</p>
+      </div>
+      <p class="lead" style="margin-bottom:2.2rem">Environmentally responsible energy solutions that promote resource efficiency, reduce dependence on conventional energy and improve quality of life. Practical, affordable and scalable for households, agriculture, businesses and institutions.</p>
+      <div class="energy-grid">
+        <div><h3>Biogas Solutions</h3><p>Development and installation support for biogas systems using organic waste and agricultural resources.</p></div>
+        <div><h3>Renewable Energy Systems</h3><p>Solar energy and other appropriate renewable energy solutions.</p></div>
+        <div><h3>Waste-to-Energy</h3><p>Exploring opportunities to convert organic waste into useful energy.</p></div>
+        <div><h3>Sustainable Agriculture</h3><p>Resource-efficient technologies and environmentally responsible agricultural practices.</p></div>
+        <div><h3>Energy Efficiency</h3><p>Energy-saving technologies and solutions for households and businesses.</p></div>
+        <div><h3>Green Technology Consultancy</h3><p>Technical guidance and solution-oriented support for sustainable energy initiatives.</p></div>
+      </div>
+      <p class="vision-line">A cleaner environment, improved energy access and sustainable economic development.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="pillar about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow">Our vision</p>
+          <p class="big">To become a trusted and impactful organization in skills development, human capital advancement and employment solutions, contributing to a skilled, productive and globally competitive workforce.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Our mission</p>
+          <ul class="mission" style="margin-top:1rem">
+            <li>Promote inclusive and industry-responsive skills development.</li>
+            <li>Develop competent human resources through the KSA framework.</li>
+            <li>Connect training with employment, entrepreneurship and income-generating opportunities.</li>
+            <li>Facilitate partnerships with government, the private sector and international development organizations.</li>
+            <li>Support lifelong learning, digital transformation and sustainable livelihoods.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="who">
+        <p>We believe sustainable development begins with skilled, knowledgeable and responsible people. Our approach goes beyond conventional training: by integrating Knowledge, Skills and Attitude, we develop competent, productive and adaptable people who can respond to the changing demands of national and international labour markets.</p>
+        <p>We bridge the gap between skills and employment through demand-driven training, competency-based learning, professional development, career guidance, job placement and industry-oriented workforce preparation. We also bring together government institutions, private organizations, industries, training providers, development partners and international stakeholders to deliver skills initiatives that make a difference.</p>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Area of engagement</th><th>Focus</th></tr></thead>
+          <tbody>
+            <tr><td>Skills Development</td><td>Technical, vocational and professional training</td></tr>
+            <tr><td>Human Capital Development</td><td>KSA, leadership and workplace readiness</td></tr>
+            <tr><td>Employment Solutions</td><td>Job placement and career development</td></tr>
+            <tr><td>Digital Transformation</td><td>ICT, digital skills and emerging technologies</td></tr>
+            <tr><td>Global Workforce</td><td>Language, international standards and overseas employment readiness</td></tr>
+            <tr><td>Entrepreneurship</td><td>Self-employment and enterprise development</td></tr>
+            <tr><td>Partnership &amp; Collaboration</td><td>Government, private sector and development partners</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="band closing">
+    <div class="wrap">
+      <p class="eyebrow">Our commitment</p>
+      <h2 style="margin-top:1rem">Developing Competent People, Connecting Opportunities and Building a Skilled Future.</h2>
+      <p>Skills create opportunities, technology drives progress and sustainable solutions build a better future. We connect people, businesses and institutions through one ecosystem of skills, employment, services and innovation.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#book">Book skilled manpower</a>
+        <a class="btn btn-ghost" href="#contact">Contact us</a>
+      </div>
+      <div class="contact-grid" id="contact" style="scroll-margin-top:90px">
+        <div class="box"><h3>Corporate Office</h3><p>Borak Unique Heights (Lift-10), Flat 11/A, 117, Kazi Nazrul Islam Avenue, Eskaton Garden, Dhaka 1000.</p></div>
+        <div class="box"><h3>Registered Address</h3><p>Dilkusha Centre, 28 Dilkusha, 13th Floor (Room No. 1301), Motijheel, Dhaka-1000.</p></div>
+        <div class="box"><h3>Contact Details</h3>
+          <dl>
+            <dt>Phone</dt><dd><a href="tel:+8801716641861">+88 01716641861</a></dd>
+            <dt>Tel (T&amp;T)</dt><dd><a href="tel:+880247120277">+88 0247120277</a></dd>
+            <dt>Email</dt><dd><a href="mailto:skillpoolbd@gmail.com">skillpoolbd@gmail.com</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong style="color:var(--band-fg);font-family:var(--display);font-size:1.1rem">SkillPool Bangladesh</strong><br>
+      Connecting Skills to Jobs. &middot; www.skillpool.com.bd
+    </div>
+    <nav aria-label="Footer">
+      <a href="#skills">Skills &amp; HR</a><a href="#services">Service Marketplace</a><a href="#global">Global Workforce</a><a href="#technology">Technology &amp; Products</a><a href="#energy">Green Energy</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('siteNav');
+  var mq = window.matchMedia('(max-width: 960px)');
+  function sync() { if (mq.matches) { nav.hidden = true; btn.setAttribute('aria-expanded', 'false'); } else { nav.hidden = false; } }
+  sync();
+  (mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync));
+  btn.addEventListener('click', function () {
+    var open = nav.hidden;
+    nav.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  nav.addEventListener('click', function (e) {
+    if (mq.matches && e.target.closest('a')) { nav.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  var f = document.getElementById('bookForm');
+  function fmt(v) {
+    if (!v) return 'Pick a date';
+    var d = new Date(v + 'T00:00:00');
+    return isNaN(d) ? 'Pick a date' : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+  function render() {
+    var n = Math.max(1, Math.min(500, parseInt(document.getElementById('num').value, 10) || 1));
+    document.getElementById('sumTitle').textContent = n + ' × ' + document.getElementById('svc').value;
+    document.getElementById('sumLoc').textContent = document.getElementById('loc').value;
+    document.getElementById('sumDur').textContent = document.getElementById('dur').value;
+    document.getElementById('sumDt').textContent = fmt(document.getElementById('dt').value);
+  }
+  f.addEventListener('submit', function (e) { e.preventDefault(); render(); });
+  f.addEventListener('change', render);
+  render();
+})();
+</script>
+
+</body></html>
